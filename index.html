@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Album Search</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Top -->
+    <header>
+
+      <!-- Header Name and Hamburger Menu -->
+      <nav class="header-content">  
+        <div class="name">
+          <img src="images/turntable.png" alt="logo">
+          <h1>Chansons</h1>
+        </div> 
+
+        <div class="hamburger">
+          <img src="images/hamburger.png" alt="hamburger" class="menu-btn">
+        </div>
+      </nav> 
+
+      <!-- Navigation Link -->
+      <div class="navigation">
+        <div>
+          <img src="images/close.png" alt="close" class="close-btn">
+        </div>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+      <!-- Search Bar and Button -->
+      <form class="header-content search-container">
+        <input type="text" 
+          id="searchBox"
+          placeholder="Search by artist"> 
+        <button type="submit">Get Albums</button>
+      </form>
+
+      <!-- Crowd Background Image -->
+      <img src="images/concert_photo.jpg" alt="crowd background" class="bg-img">
+    </header>
+
+    <!-- Search Results -->
+    <main>
+
+      <!-- No Results Found -->
+      <article class="no-results">
+        <h1>No results found for '<span class="missingTerm"></span>'</h1>
+      </article>    
+
+      <!-- Search Results -->
+      <article class="results">
+
+        <h1>Showing results for '<span class="searchTerm"></span>'</h1>
+
+        <!-- Album Cards -->
+        <ul class="results-cards"></ul>
+
+        <!-- View More -->
+        <div>
+          <button type="button" id="lastFm">View more on Last.fm</button>
+        </div>
+      </article>  
+
+      <!-- Suggested -->
+      <article class="suggested">
+        <h1>Most searched</h1>
+        <ul class="top-artists">
+          <li id="one">
+            <img src="images/foo.jpg" alt="band photo">
+            Foo Fighters
+          </li>
+          <li id="two">
+            <img src="images/avenged.jpg" alt="band photo">
+            Avenged Sevenfold
+          </li>
+          <li id="three">
+            <img src="images/chili.jpg" alt="band photo">
+            Red Hot Chili Peppers
+          </li>
+        </ul>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <h3>Built by Cody Maxwell for DWS2</h3>
+    </footer>
+
+    
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

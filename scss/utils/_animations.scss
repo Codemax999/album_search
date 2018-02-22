@@ -1,0 +1,23 @@
+// Animations
+.fade-in { 
+  animation: FadeIn 0.2s linear; 
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes FadeIn { 
+  from { opacity: 0; }
+  to { 
+    opacity: 1;
+    visibility: visible; 
+  }
+}
+.fade-out { 
+  animation: FadeOut 0.2s linear; 
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes FadeOut { 
+  from { opacity: 1; }
+  to { 
+    opacity: 0;
+    visibility: hidden;
+  }
+}

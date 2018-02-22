@@ -1,0 +1,13 @@
+footer {
+  background: $shade-black;
+  height: 70px;
+  width: 100%;
+  @include flex(row, center, center);
+
+  h3 {
+    color: $shade-light;
+    font-size: $font-medium;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+}

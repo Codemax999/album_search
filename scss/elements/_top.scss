@@ -1,0 +1,110 @@
+/* Top Container */
+header {
+  height: 70%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  @include mq(smallLandscape) { height: 40%; }
+  @include mq(navLarge) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .bg-img {
+    width: 100%;
+    position: fixed;
+    object-fit: cover;
+    height: 70%;
+    filter: sepia(0.2) saturate(1) contrast(0.8); 
+    @include mq(smallLandscape) { height: 40%; }
+  }
+}
+
+/* Header Navigation */
+nav {
+  background: linear-gradient(to bottom, $shade-black, rgba(0, 0, 0, 0.05));
+  height: 20%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  @include flex(row, center, flex-end);
+  @include mq(navLarge) { 
+    animation: FadeIn 0.2s linear !important; 
+    -webkit-animation-fill-mode: forwards;
+    @include flex(row, flex-start, flex-end); 
+  }
+}
+
+.name {
+  display: flex;
+  flex-grow: 1;
+  padding-left: 40px;
+  @include flex(row, center, center);
+  @include mq(navLarge) { flex-grow: 0; }
+
+  img {
+    height: 25px;
+    margin-right: 5px;
+  }
+
+  h1 { 
+    color: #fff; 
+    font-size: $font-large;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+}
+
+.hamburger {
+  @include mq(navLarge) { visibility: hidden; }
+  img { @extend %hamburger-icon; }
+}
+
+.navigation {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  visibility: hidden;
+  z-index: 1;
+  @include mq(navLarge) {
+    animation: FadeIn 0.2s linear !important; 
+    -webkit-animation-fill-mode: forwards;
+    background: transparent;
+    height: 20%;
+    position: static;
+    @include flex(row, flex-end, flex-end);
+  }
+
+  div:nth-child(1) {
+    height: 20%;
+    @include flex(row, flex-end, flex-end);
+    @include mq(navLarge) { visibility: hidden; }
+
+    img { @extend %hamburger-icon; }
+  }
+
+  ul {
+    color: #fff;
+    letter-spacing: 1px;
+    list-style-type: none;
+    height: 80%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    @include flex(column, space-around, center);
+    @include mq(navLarge) { 
+      visibility: visible;
+      width: 50%;
+      @include flex(row, flex-end, flex-end); 
+    }
+
+    li { 
+      text-align: center;
+      text-shadow: 2px 2px $shade-dark; 
+      width: 30%;
+      @include mq(navLarge) { visibility: visible; }
+    }
+    li:nth-child(1) { color: $primary-main; }
+  }
+}

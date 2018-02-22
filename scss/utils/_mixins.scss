@@ -1,0 +1,29 @@
+// flex
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start) {
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+// media query
+@mixin mq($size) {
+  @if $size == small {
+    @media (min-width: 300px) { @content; }
+  }
+  @else if $size == medium {
+    @media (min-width: 600px) { @content; }
+  }
+  @else if $size == navLarge {
+    @media (min-width: 700px) { @content; }
+  }
+  @else if $size == large {
+    @media (min-width: 900px) { @content; }
+  }
+  @else if $size == massive {
+    @media (min-width: 1300px) { @content; }
+  }
+  @else if $size == smallLandscape {
+    @media (min-height: 440px) { @content; }
+  }
+}

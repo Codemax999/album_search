@@ -1,0 +1,19 @@
+{
+  "name": "album-search",
+  "version": "1.0.0",
+  "description": "Full Sail University Designing for Web Standards Week One: Album Search",
+  "main": "index.js",
+  "scripts": {
+    "lite": "lite-server --port 10001",
+    "start": "npm run lite"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "lite-server": "^2.3.0"
+  }
+}
